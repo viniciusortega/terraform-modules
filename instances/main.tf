@@ -3,6 +3,12 @@ resource "aws_instance" "foo" {
   instance_type = "t3.micro"
 }
 
+resource "aws_instance" "bar" {
+  ami           = "ami-005e54dee72cc1d00" # us-west-2
+  instance_type = "t2.micro"
+}
+
+
 resource "aws_vpc" "my_vpc" {
   cidr_block = "172.16.1.0/16"
 
